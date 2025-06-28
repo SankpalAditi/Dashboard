@@ -1,0 +1,126 @@
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f7f5;
+  color: #333;
+}
+
+.dashboard-container {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #6a8caf;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout (vertical stack) */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.card {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Section-specific pastel colors */
+.profile-section {
+  background-color: #fef6fb;
+}
+
+.task-section {
+  background-color: #f3f9f7;
+}
+
+.stats-section {
+  background-color: #f5f7ff;
+}
+
+/* Form layout */
+.form, .edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #a3d2ca;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7db9b6;
+}
+
+/* Lists */
+.profile-list,
+.task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.task-list li,
+.profile-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.task-list span {
+  flex: 1;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form,
+  .edit-form,
+  .task-list li,
+  .profile-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
+}
